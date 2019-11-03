@@ -11,9 +11,6 @@
 
 }
 
-#slider{
-    width:100%;
-}
 
 #length{
     display: inline-block;
@@ -22,5 +19,10 @@
 
 .previous_passwords{
     margin-bottom: 20px;
+}
+
+button{
+    margin-top: 5px;
+    align-items: center;
 }
 
