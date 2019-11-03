@@ -1,17 +1,36 @@
-var result = document.getElementById('display');
-var generate = document.getElementById('generate');
-var clipboard = document.getElementById('clipboard');
+var result = document.getElementById("display");
+var generate = document.getElementById("generate");
+var clipboard = document.getElementById("clipboard");
 
 
-function verify(length, useLower,useUpper, useNumbers, useSymbols)
-
-var length = parseInt(prompt("To ensure security, choose a character amount between 8 & 128"));{
+ length = parseInt(prompt("To ensure security, choose a character amount between 8 & 128"));{
     if(length > 7 && length < 129) {
-    
-         var useLower = confirm("Would you like to use lowercase letters?");
-         var useUpper = confirm("Would you like to use uppercase letters?");
-         var useNumbers = confirm("Would you like to use numbers?");
-         var useSymbols = confirm("Would you like to use symbols?");
+      
+          
+         confirm("Would you like to use lowercase letters?");{
+            useLower = ("abcdefghijklmnopqrstuvwxyz");{
+            if(false.valueOfuseLower = (""));
+           
+            }}
+
+         
+         confirm("Would you like to use uppercase letters?");{
+            useUpper = ("ABCDEFGHIJKLMNOPQRSTUVWZYZ");{
+            if(false.valueOfuseUpper = (""));
+         }}
+        
+          
+         confirm("Would you like to use numbers?");{
+            useNumbers = ("1234567890");{
+            if(false.valueOfuseNumbers = (""));
+         }}
+        
+          
+         confirm("Would you like to use symbols?");{
+            useSymbols = ("!@#$%^&*()_+");{
+            if(false.valueOfuseSymbols = (""));
+         }}
+            
         
     } else if (isNaN(length)) {
         alert("Please enter a number between 8 and 128.");
@@ -32,19 +51,3 @@ var length = parseInt(prompt("To ensure security, choose a character amount betw
 }
 
 
-
-//generate random password
-function generate(){
-
- 
-
-//function to copy password to clipboard
-function copyPassword(){
-
-    document.getElementById("display").select();
-
-    document.execCommand("Copy");
-
-    alert("Password copied to clipboard!");
-
-}
