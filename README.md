@@ -1,6 +1,6 @@
 # JavaScript-Homework-Password-Generator
 
-![PWGenerator](images/Generator screen shot.png?raw=true "Generatorscreenshot")
+images/Generator screen shot.png
 
 This application generates a safe random password based on user-selected criteria. 
 
