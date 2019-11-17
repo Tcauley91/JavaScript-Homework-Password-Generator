@@ -4,6 +4,8 @@ var passwordEl = document.getElementById("display");
 var generateEl = document.getElementById("generate");
 var clipboardEl = document.getElementById("clipboard");
 
+var userGeneratedPW;
+
 // User password input prompts
 generateEl.addEventListener("click", function(){
 
@@ -32,7 +34,7 @@ generateEl.addEventListener("click", function(){
         alert("Please choose at least one character type.")
       }
 
-        var generateEl = length.value;
+        // generateEl = length.value;
 
         passwordEl.innerText = generatePassword(length, useLower, useUpper, useNumbers, useSymbols);
     })
@@ -40,7 +42,7 @@ generateEl.addEventListener("click", function(){
 
         // this function takes the user imputs and places them in an array to form a random password
     function generatePassword(lower, upper, number, symbol, length){
-        var userGeneratedPW = '';
+        userGeneratedPW = '';
         var charCount = lower + upper + number + symbol;
         var charArry = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
 
@@ -57,8 +59,11 @@ generateEl.addEventListener("click", function(){
         }
 
         var finalPW = userGeneratedPW.slice(0, length);
-        return finalPW
+        // return finalPW;
+
+        console.log(finalPW);
         }
+
 
         var randomFunc = {
             lower: randomLower,
