@@ -3,7 +3,6 @@
 var passwordEl = document.getElementById("display");
 var generateEl = document.getElementById("generate");
 var clipboardEl = document.getElementById("clipboard");
-
 var userGeneratedPW;
 
 // User password input prompts
@@ -36,12 +35,12 @@ generateEl.addEventListener("click", function(){
 
         // generateEl = length.value;
 
-        passwordEl.innerText = generatePassword(length, useLower, useUpper, useNumbers, useSymbols);
+         generatePassword(length, useLower, useUpper, useNumbers, useSymbols);
     })
     
 
         // this function takes the user imputs and places them in an array to form a random password
-    function generatePassword(lower, upper, number, symbol, length){
+    function generatePassword(length, lower, upper, number, symbol){
         userGeneratedPW = '';
         var charCount = lower + upper + number + symbol;
         var charArry = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
@@ -62,6 +61,10 @@ generateEl.addEventListener("click", function(){
         // return finalPW;
 
         console.log(finalPW);
+        console.log(length);
+
+        passwordEl.textContent = finalPW;
+
         }
 
 
