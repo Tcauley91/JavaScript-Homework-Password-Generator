@@ -2,11 +2,10 @@
 
 var passwordEl = document.getElementById("display");
 var generateEl = document.getElementById("generate");
-var clipboardEl = document.getElementById("clipboard");
 var userGeneratedPW;
 
 // User password input prompts
-generateEl.addEventListener("click", function(){
+
 
  var length = parseInt(prompt("To ensure security, choose a character amount between 8 & 128"));
     if(length > 7 && length < 129){
@@ -33,10 +32,12 @@ generateEl.addEventListener("click", function(){
         alert("Please choose at least one character type.")
       }
 
+      generateEl.addEventListener("click", function(){
         // generateEl = length.value;
 
-         generatePassword(length, useLower, useUpper, useNumbers, useSymbols);
-    })
+        generatePassword(length, useLower, useUpper, useNumbers, useSymbols);
+    
+    
     
 
         // this function takes the user imputs and places them in an array to form a random password
@@ -65,7 +66,7 @@ generateEl.addEventListener("click", function(){
 
         passwordEl.textContent = finalPW;
 
-        }
+        }})
 
 
         var randomFunc = {
@@ -98,7 +99,8 @@ generateEl.addEventListener("click", function(){
 function myFunction() {
     /* Get the text field */
     var copyText = document.getElementById("display");
-  
+    
+    console.log(copyText);
     /* Select the text field */
     copyText.select();
     copyText.setSelectionRange(0, 99999); /*For mobile devices*/
@@ -107,6 +109,6 @@ function myFunction() {
     document.execCommand("copy");
   
     /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
+    alert("Your password " + copyText.value + " has been copied to your clipboard!");
   }
   
