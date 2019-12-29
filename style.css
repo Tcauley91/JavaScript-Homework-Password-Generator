@@ -21,8 +21,9 @@
     margin-bottom: 20px;
 }
 
-button{
+#button{
     margin-top: 5px;
     align-items: center;
+    background: gray
 }
 
