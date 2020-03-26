@@ -19,4 +19,4 @@ Upon ansering the prompts simply click "generate password" and it will appear on
 
 See the deployed website here:
 
-https://tcauley91.github.io/JavaScript-Homework-Password-Generator/.
+ https://tcauley91.github.io/Password-Generator/
