@@ -6,7 +6,7 @@ var userGeneratedPW;
 
 // User password input prompts
 
-
+onload(){
  var length = parseInt(prompt("To ensure security, choose a character amount between 8 & 128"));
     if(length > 7 && length < 129){
       
@@ -111,4 +111,5 @@ function myFunction() {
     /* Alert the copied text */
     alert("Your password " + copyText.value + " has been copied to your clipboard!");
   }
+};
   
